@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/chenmo230/react-native-weibo" }
   s.author       = 'BA'
   s.source_files = 'ios/**/*.{h,m,a}'
+  s.vendored_libraries = 'ios/**/*.a'
   s.platform     = :ios, "8.0"
   s.dependency 'React-Core'
 end
