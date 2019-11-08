@@ -82,3 +82,7 @@ export function share(data) {
     return Promise.all([waitForResponse('WBSendMessageToWeiboResponse'), nativeSendMessageRequest(data)]).then(v=>v[0]);
 }
 
+export let isWeiboAppInstalled = WeiboAPI.isWeiboAppInstalled
+export let isCanShareInWeiboAPP = WeiboAPI.isCanShareInWeiboAPP
+export let isCanSSOInWeiboApp = WeiboAPI.isCanSSOInWeiboApp
+export let SDKVersion = WeiboAPI.getSDKVersion
