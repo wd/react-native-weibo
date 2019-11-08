@@ -301,4 +301,13 @@ RCT_EXPORT_METHOD(shareToWeibo:(NSDictionary *)aData
     return authRequest;
 }
 
+- (NSDictionary<NSString *, id> *)constantsToExport {
+    return @{
+             @"isWeiboAppInstalled": @([WeiboSDK isWeiboAppInstalled]),
+             @"isCanShareInWeiboAPP": @([WeiboSDK isCanShareInWeiboAPP]),
+             @"isCanSSOInWeiboApp": @([WeiboSDK isCanSSOInWeiboApp]),
+             @"getSDKVersion": [WeiboSDK getSDKVersion]
+        };
+}
+
 @end
